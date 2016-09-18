@@ -91,3 +91,7 @@
     (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
   ))
+
+(use-package avy
+  :ensure t
+  :bind ("M-s" . avy-goto-char))
