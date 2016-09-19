@@ -11,7 +11,7 @@
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(package-selected-packages
    (quote
-    (org auto-complete counsel swiper lorem-ipsum ace-window org-bullets which-key try use-package))))
+    (yasnippet flycheck org auto-complete counsel swiper lorem-ipsum ace-window org-bullets which-key try use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
