@@ -4,3 +4,6 @@ auto-save-list
 \#*
 ido.last
 recentf
+ac-comphist.dat
+my-init.el
+games
