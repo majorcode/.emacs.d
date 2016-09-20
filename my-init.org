@@ -38,7 +38,7 @@
   #+END_SRC
 
 
-* Move Temp Files to Backup Directory
+* Move Temp & Backup Files
   Put autosave and backup files in a safe, non-intrusive location.
   #+BEGIN_SRC emacs-lisp
     (defvar backup-dir (expand-file-name "~/.emacs.d/backup/"))
@@ -148,9 +148,8 @@
 
 
 * Auto-complete
-  This is a really simple auto-complete based on words in buffers. 
-  Maybe soon, try company-mode for a more complete package that is 
-  smart about programming language support.
+  This is a really simple auto-complete based. Maybe soon, 
+  try company-mode for a more complete package.
 
   #+BEGIN_SRC emacs-lisp
     (use-package auto-complete
