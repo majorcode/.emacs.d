@@ -1,5 +1,7 @@
 elpa
 auto-save-list
+autosave
+backup
 *~
 \#*
 ido.last
