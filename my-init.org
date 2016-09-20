@@ -10,7 +10,7 @@
   These are things that are often added/removed for a session
 
   #+BEGIN_SRC emacs-lisp
-  (set-face-attribute 'default nil :height 150)
+  (set-face-attribute 'default nil :height 130)
   #+END_SRC
 
 
@@ -26,6 +26,8 @@
     (global-set-key (kbd "<f5>") 'revert-buffer)
     (defalias 'list-buffers 'ibuffer)
     ;(defalias 'list-buffers 'ibuffer-other-window)
+    (add-to-list 'default-frame-alist '(height . 50))
+    (add-to-list 'default-frame-alist '(width . 80))
   #+END_SRC
 
 
@@ -78,7 +80,7 @@
       (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
   #+END_SRC
 
-
+  
 * Ido Setup
   Ido all the things!!!
 
@@ -96,12 +98,10 @@
     (use-package ace-window
       :ensure t
       :init
-      (progn
-        (global-set-key [remap other-window] 'ace-window)
-        (custom-set-faces
-         '(aw-leading-char-face
-           ((t (:inherit ace-jump-face-foreground :height 3.0))))) 
-      ))
+      (global-set-key [remap other-window] 'ace-window)
+      (custom-set-faces
+       '(aw-leading-char-face
+         ((t (:inherit ace-jump-face-foreground :height 3.0))))))
   #+END_SRC
 
 
@@ -155,10 +155,8 @@
     (use-package auto-complete
       :ensure t
       :init
-      (progn
-        (ac-config-default)
-        (global-auto-complete-mode t)
-      ))
+      (ac-config-default)
+      (global-auto-complete-mode t))
   #+END_SRC
 
 
@@ -167,7 +165,9 @@
     (use-package flycheck
       :ensure t
       :init
-      (global-flycheck-mode t))
+      (global-flycheck-mode t)
+      :config
+      (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
   #+END_SRC
 
 
@@ -178,3 +178,7 @@
       :init
       (yas-global-mode 1))
   #+END_SRC
+
+
+
+
