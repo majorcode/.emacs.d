@@ -4,8 +4,11 @@ autosave
 backup
 *~
 \#*
+\.\#*
 ido.last
 recentf
 ac-comphist.dat
 my-init.el
 games
+url
+
