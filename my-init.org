@@ -180,5 +180,28 @@
   #+END_SRC
 
 
+* PHP Mode
+  #+BEGIN_SRC emacs-lisp
+    (use-package php-mode
+      :ensure t)
+  #+END_SRC
 
+
+* Web Mode
+  #+BEGIN_SRC emacs-lisp
+    (use-package web-mode
+      :ensure t
+      :config
+      (add-to-list 'auto-mode-alist '("\\.html\\.php\\'" . web-mode))
+      (add-to-list 'auto-mode-alist '("\\.txt\\.php\\'" . web-mode))
+      (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
+  #+END_SRC
+
+
+* Expand Region
+  #+BEGIN_SRC emacs-lisp
+    (use-package expand-region
+      :ensure t
+      :bind ("C-=" . er/expand-region))
+  #+END_SRC
 
